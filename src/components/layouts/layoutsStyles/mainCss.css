@@ -1,0 +1,22 @@
+main{
+    background-color:  #340180;
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-list-task{
+    align-self: center;
+    display: flex;
+    width: 80vw;
+    height: 50vh;
+    background-color: #280147;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.view-list-task p{
+    overflow-wrap: break-word;
+}
+
