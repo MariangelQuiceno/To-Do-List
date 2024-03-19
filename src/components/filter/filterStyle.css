@@ -41,7 +41,7 @@ h3{
 
 }
 
-.create-task-button{
+.create-task-button button{
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     display: flex;
