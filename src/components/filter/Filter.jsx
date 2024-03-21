@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './filterStyle.css';
 import { tasksContext } from '../Context/Context';
 
@@ -6,10 +6,15 @@ export const Filter = () => {
     const context = useContext(tasksContext);
     
     const [textValue, setTextValue] = useState('');
+    const [taskCount, setTaskCount] = useState(0); 
     const maxCharacters = 250;
 
+    useEffect(() => {
+        setTaskCount(context.tasks.length);
+    }, [context.tasks]);
+
     const handleCreateTask = (event) => {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
+        event.preventDefault(); 
         const newTask = {
             title: event.target.elements.title.value,
             description: event.target.elements.description.value,
@@ -17,6 +22,7 @@ export const Filter = () => {
         };
         let listTasks = [...context.tasks, newTask];
         context.setTasks(listTasks);
+        setTaskCount(listTasks.length); 
     };
 
     const handleChangeCharacters = (event) => {
@@ -51,7 +57,7 @@ export const Filter = () => {
                 </div>
             </form>
 
-            <h2>Información de tareas:</h2>
+            <h2>Información de tareas: {taskCount}</h2>
             <hr></hr>
 
             <div className='filter'>

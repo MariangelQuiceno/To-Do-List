@@ -7,10 +7,7 @@
     padding: 1rem;
 }
 
-.father-filter button{
-    width: 5rem;
-    height: 2rem;
-}
+
 
 .inputs{
     display: flex;
@@ -41,12 +38,16 @@ h3{
 
 }
 
-.create-task-button button{
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+.create-task-button {
+    width: 90%;
     display: flex;
-    justify-self: center;
-    align-self: center;
+    justify-content: center;
+    
+}
+
+.create-task-button button {
+    width: 5rem;
+    height: 2rem;
 }
 
 p{

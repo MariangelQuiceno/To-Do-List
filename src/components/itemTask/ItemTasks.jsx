@@ -16,7 +16,7 @@ export const ItemTasks = ({ title, desc }) => {
   return (
 
     <div className='list-component' id={`task_${taskId}`}>
-    <li id={`titleTask_${taskId}`}>Nombre de la Tarea: {title}  <input type="checkbox" id={`cbox_${taskId}`} value="second_checkbox" /></li> 
+    <li id={`titleTask_${taskId}`}>Nombre de la Tarea: {title}  <input type="checkbox" id={`cbox_${taskId}`} /></li> 
       <p id={`descriptionTask_${taskId}`}>Descripción: {desc}</p>
     </div>
    
