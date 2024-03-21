@@ -48,7 +48,7 @@ export const Filter = () => {
                             maxLength={maxCharacters}
                             name="description"
                         />
-                        <p>Caracteres restantes: {maxCharacters - textValue.length}</p>
+                        <p className='text-counter'>Caracteres restantes: {maxCharacters - textValue.length}</p>
                     </div>
                 </div>
 

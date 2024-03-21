@@ -1,7 +1,7 @@
 .father-filter{
-    
+    color: #ca5541;
     height: max-content;
-    background-color:  #340180;
+    background-color:  #1d001d;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -23,6 +23,7 @@ input, textarea{
 
 h4{
     margin-right: 1rem;
+    
 }
 
 .filter{
@@ -46,12 +47,22 @@ h3{
 }
 
 .create-task-button button {
-    width: 5rem;
+    width: 8rem;
     height: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #ca5541;
+    border-radius: 25px;
+    border-style: none;
+    color: #2b022d;
+    font-weight: bold;
 }
 
-p{
+.text-counter{
     margin-left: 1rem;
+    color: #ca5541;
 }
 
 .organizer-filter{
@@ -65,4 +76,13 @@ p{
     justify-content: space-around;
 }
 
+select{
+    width: 10rem;
+    padding: 0.5rem;
+    background-color:  #ca5541;
+    border-radius: 25px;
+    border-style: none;
+    color: #2b022d;
+    font-weight: bold;
+}
 

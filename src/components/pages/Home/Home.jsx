@@ -20,7 +20,7 @@ export const Home = () => {
     <div className='father-all'>
         <Header>
             <h1 className='h1-Header'>Lista de Tareas</h1>
-            <img className='Icon' src={IconHeader} alt="Icono" />
+            
         </Header>
 
         <Main>
