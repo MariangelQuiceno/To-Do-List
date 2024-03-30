@@ -1,0 +1,32 @@
+header{
+    background-image: url('../../../assets/fondos/bgLands4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:  white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20rem;
+}
+
+
+
+.Icon{
+    width: 15%;
+}
+
+.h1-Header{
+    width: 100vw;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, 0.322);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+h1{
+    color: rgba(240, 248, 255, 0.574);
+}

@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  background-color: #2b022d;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,23 @@
+main{
+    background-color:  #3a032e;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-list-task{
+    align-self: center;
+    display: flex;
+    width: 80vw;
+    height: max-content;
+    background-color: #822d39;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.view-list-task p{
+    overflow-wrap: break-word;
+}
+

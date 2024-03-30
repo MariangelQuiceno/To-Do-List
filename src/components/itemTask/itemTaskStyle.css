@@ -1,0 +1,30 @@
+.list-component{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.items-organizer-list{
+    display: flex;
+    flex-direction: row;
+}
+
+
+li{
+    color: white;
+    list-style-type: '⛱ . ';
+    color: #eb998b;
+}
+
+p{
+    max-width: 80%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    color: #eb998b;
+    text-overflow: ellipsis;
+}
+
+span{
+    color: #ee9221;
+}

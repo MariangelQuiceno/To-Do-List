@@ -1,0 +1,14 @@
+footer{
+    background-color:  #2b022d;
+    color:  white;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+}
+
+.h1-Footer{
+    font-size: 4rem;
+}
+
