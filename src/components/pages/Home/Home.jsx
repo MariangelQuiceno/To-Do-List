@@ -10,6 +10,7 @@ import './homeStyle.css'
 
 export const Home = () => {
 
+  {/* Se encarga de actualizar el estado de las checkbox, falso o true*/}
   const handleCheckboxChange = (e, taskId) => {
     const updatedTasks = otherContext.tasks.map(task => {
         if (task.id === taskId) {
@@ -36,6 +37,7 @@ export const Home = () => {
     }
   });
 
+  {/* Imprime en la consola el array, solo para verificar */}
   useEffect(() => {
     console.log(otherContext.tasks);
   }, [otherContext.tasks]);
@@ -49,8 +51,10 @@ export const Home = () => {
       <Main>
         <Filter setFilterOption={setFilterOption} />
 
+
         <div className='view-list-task'>
           <Tasks>
+            {/* Iterar y generar as tareas que estan en el array*/}
             {filteredTasks.map(task => (
               <ItemTasks
                 key={task.id}

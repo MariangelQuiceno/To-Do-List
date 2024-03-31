@@ -8,28 +8,37 @@ const generateUniqueId = () => {
     idCounter++;
     return `task-${idCounter}`;
 };
+{/* Se utiliza contadores para generar ID's unicos que van incrementando */}
 
-export const Filter = ({ setFilterOption }) => { // Añade setFilterOption como prop
 
-    const context = useContext(tasksContext);
+export const Filter = ({ setFilterOption }) => { {/* setFilterOption sirve para cambiar la opcion del filtro */}
 
-    const [textValue, setTextValue] = useState('');
-    const [taskCount, setTaskCount] = useState(0);
+    const context = useContext(tasksContext); {/* Accede al context y sus variables Globales */}
+
+    {/* Estados  que se utilizan en el componente */}
+
+    const maxCharacters = 250; // Caracteres Maximos
+    const [textValue, setTextValue] = useState('');  // Contador Texto, caracteres
+    const [taskCount, setTaskCount] = useState(0); //Contador de tareas
     const [pendingTaskCount, setPendingTaskCount] = useState(0); // Contador de tareas pendientes
     const [filterOption, setFilterOptionLocal] = useState("all"); // Opción de filtro, comienza en "Todas las Tareas"
-    const maxCharacters = 250;
+    
 
+    {/* 'useEffect' se utiliza para realizar efectos secundarios después de renderizar el componente. 
+     Este actualiza el recuento de tareas y el recuento de tareas pendientes cuando cambia el estado global de las tareas. */}
     useEffect(() => {
-        setTaskCount(context.tasks.length);
+        setTaskCount(context.tasks.length); //Cuenta las tareas
 
-        // Contar tareas pendientes
+        // Cuenta las tareas pendientes
         const pendingTasks = context.tasks.filter(task => !task.state);
         setPendingTaskCount(pendingTasks.length);
     }, [context.tasks]);
 
+    {/* Manejo de tareas*/}
     const handleCreateTask = (event) => {
-        event.preventDefault();
+        event.preventDefault();  {/* Evita que la pagina se recarge */}
 
+        {/*Tarea y sus elementos */}
         const newTask = {
             id: generateUniqueId(),
             title: event.target.elements.title.value,
@@ -37,30 +46,29 @@ export const Filter = ({ setFilterOption }) => { // Añade setFilterOption como 
             state: false // Nueva tarea comienza como pendiente
         };
 
-        const updatedTasks = [...context.tasks, newTask];
+        {/* Se agrega la nueva tarea y se actualizan los estados */}
+        const updatedTasks = [...context.tasks, newTask]; 
         context.setTasks(updatedTasks);
         setTaskCount(updatedTasks.length);
         setPendingTaskCount(pendingTaskCount + 1); // Aumentar el contador de tareas pendientes
     };
 
+
+    {/* Manejo de Caracteres en la Descripción */}
     const handleChangeCharacters = (event) => {
         if (event.target.value.length <= maxCharacters) {
             setTextValue(event.target.value);
         }
     };
 
+    {/* Manejo del Filtro */}
     const handleFilterChange = (event) => {
         const option = event.target.value;
         setFilterOptionLocal(option); // Actualiza el estado local de la opción de filtro
         setFilterOption(option); // Llama a la función setFilterOption pasada como prop
     };
 
-    let filteredTasks = context.tasks;
-    if (filterOption === "pending") {
-        filteredTasks = context.tasks.filter(task => !task.state);
-    } else if (filterOption === "completed") {
-        filteredTasks = context.tasks.filter(task => task.state);
-    }
+   
 
     return (
         <div className='father-filter'>
