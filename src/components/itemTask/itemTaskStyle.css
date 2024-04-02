@@ -28,3 +28,10 @@ p{
 span{
     color: #ee9221;
 }
+
+
+.list-component input[type="checkbox"] {
+    width: 20px;
+    height: 20px ;
+}
+
