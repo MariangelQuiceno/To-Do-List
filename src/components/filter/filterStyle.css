@@ -96,3 +96,32 @@ select{
     font-weight: bold;
 }
 
+@media (max-width: 352px) {
+  
+    .inputs {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .organizer-filter {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+        flex-direction: column;
+      }
+
+      .filter {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        justify-content: space-around;
+        margin-top: 1rem;
+        flex-direction: column;
+       }
+
+  }
+
